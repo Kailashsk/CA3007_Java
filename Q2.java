@@ -1,3 +1,15 @@
+/* Write a program in Java to declare a class called Book with data members 
+as title, publisher, authors, price and number_of_pages. Define 
+member methods (as per your convenience) to input the data from user 
+interface for the Book object and display it. Also you need to write a 
+method to compare two Book objects and display whether they are the 
+same books or different one. (Note: Use method which returns a boolean 
+data type and also pass object as parameter to the method for comparing 
+two book objects). */
+
+
+
+
 class Book1{
     String title,publisher,author;
     int price,page;
