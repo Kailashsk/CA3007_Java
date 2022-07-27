@@ -28,23 +28,35 @@ class Time{
 
     void add_Time(Time t1,Time t2)
     {
+
         if((t1.second+t2.second)>=60)
         {
             second=t1.second+t2.second-60;
             t1.minute++;
             minute=t1.minute+t2.minute;
         }
-        if(t1.minute+t2.minute>=60)
+        if((t1.minute+t2.minute)>=60)
         {
             minute=t1.minute+t2.minute-60;
+            if(minute>=60)
+            {
+            minute=0;
             hour=t1.hour+t2.hour;
             hour++;
+            minute++;
+            }
+            else
+            {
+            hour=t1.hour+t2.hour;
+            hour++;  
+            }
+            
         }
     }
 }
 
 
-public class time1 {
+public class Time {
     public static void main(String[] args) {
         Time t1=new Time();
         t1.get_Time();
@@ -54,8 +66,8 @@ public class time1 {
         t2.get_Time();
         t2.show_Time();
 
-       // Time t3=new Time();
-       // t3.add_Time(t1, t2);
-       // t3.show_Time();
+       Time t3=new Time();
+       t3.add_Time(t1, t2);
+       t3.show_Time();
     }
 }
